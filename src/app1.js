@@ -1,7 +1,8 @@
 import "./app1.css"
 import $ from "jquery"
 
-const html = `
+const v = {
+    html: `
     <section id="app1">
         <div class="output"><span id="number">100</span></div>
         <div class="actions">
@@ -11,8 +12,14 @@ const html = `
             <button id="divide">÷2</button>
         </div>
     </section>
-`
-$(html).prependTo($('body > .page'));
+`,
+    render() {
+        $(v.html).prependTo($('body > .page'));
+    }
+}
+
+v.render()
+
 const $button1 = $('#add')
 const $button2 = $('#minus ')
 const $button3 = $('#times')
