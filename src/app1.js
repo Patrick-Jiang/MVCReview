@@ -1,25 +1,28 @@
 import "./app1.css"
 import $ from "jquery"
+import Model from "./base/Model";
 
 const eventBus = $({})
-const m = {
+
+const m = new Model({
     data: {
         n: parseInt(localStorage.getItem('n'))
-    },
-    create() {
-    },
-    delete() {
     },
     update(data) {
         Object.assign(m.data, data)
         eventBus.trigger('m:updated')
-        localStorage.setItem('n',m.data.n)
-    },
-    get() {
-    },
+        localStorage.setItem('n', m.data.n)
+    }
+})
+
+const v = {
+
+
 
 }
-const v = {
+
+
+const view = {
     el: null,
     html: `
     <div>
@@ -32,27 +35,20 @@ const v = {
         </div>
     </div>
 `,
-    init(el) {
-        v.el = $(el)
+    init(container) {
 
+        view.el = $(container)
+        view.render(m.data.n)
+        view.autoBindEvents()
+        eventBus.on('m:updated', () => {
+            view.render(m.data.n)
+        })
     },
     render(n) {
-        if (v.el.children.length !== 0) {
-            v.el.empty();
+        if (view.el.children.length !== 0) {
+            view.el.empty();
         }
-        $(v.html.replace('{{n}}', n)).appendTo(v.el);
-    }
-}
-
-
-const c = {
-    init(container) {
-        v.init(container)
-        v.render(m.data.n)
-        c.autoBindEvents()
-        eventBus.on('m:updated', () => {
-            v.render(m.data.n)
-        })
+        $(view.html.replace('{{n}}', n)).appendTo(view.el);
     },
     events: {
         'click #add': 'add',
@@ -73,18 +69,18 @@ const c = {
         m.update(m.data.n /= 2)
     },
     autoBindEvents() {
-        for (let key in c.events) {
+        for (let key in view.events) {
             const spaceIndex = key.indexOf(' ')
-            const value = c[c.events[key]]
+            const value = view[view.events[key]]
             const part1 = key.slice(0, spaceIndex)
             const part2 = key.slice(spaceIndex + 1)
-            v.el.on(part1, part2, value)
+            view.el.on(part1, part2, value)
         }
     }
 }
 
 
-export default c
+export default view
 
 
 
