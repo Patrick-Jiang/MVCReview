@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="589932c9-7e8a-411c-9582-42522ef60618" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/base/Model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/base/View.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/View.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +47,7 @@
       <updated>1607046299705</updated>
       <workItem from="1607046300868" duration="2696000" />
       <workItem from="1607116287212" duration="1196000" />
-      <workItem from="1607440124580" duration="19684000" />
+      <workItem from="1607440124580" duration="21871000" />
     </task>
     <task id="LOCAL-00001" summary="add basic function for app1,app2,app3,app4">
       <created>1607446479564</created>
@@ -77,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607461662608</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="refactor app1 to Model and View">
+      <created>1607466453780</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607466453780</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +108,7 @@
     <MESSAGE value="Change to MVC framework" />
     <MESSAGE value="finish app1" />
     <MESSAGE value="finish app2" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish app2" />
+    <MESSAGE value="refactor app1 to Model and View" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor app1 to Model and View" />
   </component>
 </project>
