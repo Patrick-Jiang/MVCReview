@@ -1,0 +1,46 @@
+import "./app1.css"
+import $ from "jquery"
+
+const html = `
+    <section id="app1">
+        <div class="output"><span id="number">100</span></div>
+        <div class="actions">
+            <button id="add">+1</button>
+            <button id="minus">-1</button>
+            <button id="times">×2</button>
+            <button id="divide">÷2</button>
+        </div>
+    </section>
+`
+$(html).prependTo($('body > .page'));
+const $button1 = $('#add')
+const $button2 = $('#minus ')
+const $button3 = $('#times')
+const $button4 = $('#divide')
+const $number = $('#number')
+const n = localStorage.getItem('n')
+$number.text(n || 100)
+$button1.on('click', () => {
+    let n = parseInt($number.text())
+    n += 1
+    localStorage.setItem('n', n)
+    $number.text(n)
+})
+$button2.on('click', () => {
+    let n = parseInt($number.text())
+    n -= 1
+    localStorage.setItem('n', n)
+    $number.text(n)
+})
+$button3.on('click', () => {
+    let n = parseInt($number.text())
+    n *= 2
+    localStorage.setItem('n', n)
+    $number.text(n)
+})
+$button4.on('click', () => {
+    let n = parseInt($number.text())
+    n /= 2
+    localStorage.setItem('n', n)
+    $number.text(n)
+})
