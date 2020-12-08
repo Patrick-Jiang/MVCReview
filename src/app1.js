@@ -13,6 +13,7 @@ const m = {
     update(data) {
         Object.assign(m.data, data)
         eventBus.trigger('m:updated')
+        localStorage.setItem('n',m.data.n)
     },
     get() {
     },
