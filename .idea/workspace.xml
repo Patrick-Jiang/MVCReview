@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="589932c9-7e8a-411c-9582-42522ef60618" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/Model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/View.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app2.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +47,7 @@
       <updated>1607046299705</updated>
       <workItem from="1607046300868" duration="2696000" />
       <workItem from="1607116287212" duration="1196000" />
-      <workItem from="1607440124580" duration="23927000" />
+      <workItem from="1607440124580" duration="26275000" />
     </task>
     <task id="LOCAL-00001" summary="add basic function for app1,app2,app3,app4">
       <created>1607446479564</created>
@@ -97,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607472469704</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Model and View extends eventbus">
+      <created>1607473040774</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607473040774</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +132,7 @@
     <MESSAGE value="refactor app1 to Model and View" />
     <MESSAGE value="refactor app1,app2 to Model and View" />
     <MESSAGE value="Add eventBus class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add eventBus class" />
+    <MESSAGE value="Model and View extends eventbus" />
+    <option name="LAST_COMMIT_MESSAGE" value="Model and View extends eventbus" />
   </component>
 </project>

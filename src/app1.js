@@ -1,68 +1,43 @@
 import "./app1.css"
-import $ from "jquery"
-import Model from "./base/Model";
-import View from "./base/View";
-import EventBus from "./base/EventBus";
+import Vue from 'vue'
 
 
-
-const m = new Model({
-    data: {
-        n: parseInt(localStorage.getItem('n'))
-    },
-    update(data) {
-        Object.assign(m.data, data)
-        m.trigger('m:updated')
-        localStorage.setItem('n', m.data.n)
-    }
-})
-
-
-
-
-const init = (el)=>{
-    new View ({
+const init = (el) => {
+    new Vue({
         el: el,
-        data:m.data,
-        html: `
-    <div>
+        data: {n: parseInt(localStorage.getItem('n'))},
+        methods: {
+            add() {
+                this.n += 1
+            },
+            minus() {
+                this.n -= 1
+            },
+            times() {
+                this.n *= 2
+            },
+            divide() {
+                this.n /= 2
+            }
+        },
+        watch:{
+            n(){
+                localStorage.setItem('n',this.n)
+            },
+        },
+        template: `
+    <section>
         <div class="output"><span id="number">{{n}}</span></div>
         <div class="actions">
-            <button id="add">+1</button>
-            <button id="minus">-1</button>
-            <button id="times">×2</button>
-            <button id="divide">÷2</button>
+            <button @click="add">+1</button>
+            <button  @click="minus">-1</button>
+            <button  @click="times">×2</button>
+            <button  @click="divide">÷2</button>
         </div>
-    </div>
+    </section>
 `,
-
-        render(data) {
-            const n = data.n
-            if (this.el.children.length !== 0) {
-                this.el.empty();
-            }
-            $(this.html.replace('{{n}}', n)).appendTo(this.el);
-        },
-        events: {
-            'click #add': 'add',
-            'click #minus': 'minus',
-            'click #times': 'times',
-            'click #divide': 'divide',
-        },
-        add() {
-            m.update(m.data.n += 1)
-        },
-        minus() {
-            m.update(m.data.n -= 1)
-        },
-        times() {
-            m.update(m.data.n *= 2)
-        },
-        divide() {
-            m.update(m.data.n /= 2)
-        },
-
     })
+
 }
 export default init
 
