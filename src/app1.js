@@ -2,8 +2,9 @@ import "./app1.css"
 import $ from "jquery"
 import Model from "./base/Model";
 import View from "./base/View";
+import EventBus from "./base/EventBus";
 
-const eventBus = $({})
+const eventBus = new EventBus()
 
 const m = new Model({
     data: {
